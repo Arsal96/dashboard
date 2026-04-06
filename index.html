@@ -256,16 +256,73 @@
   .card:nth-child(2) { animation-delay: .15s; }
   .card:nth-child(3) { animation-delay: .25s; }
   .card:nth-child(4) { animation-delay: .35s; }
+
+  /* ── Page Header ── */
+  .page-header {
+    max-width: 1100px;
+    margin: 0 auto 28px auto;
+    animation: fadeUp .2s ease both;
+  }
+
+  .page-header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .page-header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.5px;
+  }
+
+  .page-header h1 span { color: var(--teal); }
+
+  .header-badge {
+    font-size: 11px;
+    font-weight: 500;
+    background: #e6faf6;
+    color: var(--teal-dark);
+    border: 1px solid #b2ede3;
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.2px;
+  }
+
+  .page-header p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+
+  .header-divider {
+    height: 1px;
+    background: #dde1e8;
+  }
 </style>
 </head>
 <body>
+
+<div class="page-header">
+  <div class="page-header-top">
+    <h1>Product <span>Analytics</span> Dashboard</h1>
+  </div>
+  <p>How users behave from install to transaction — covering retention drop-off, payment funnel abandonment, silent churn patterns, and the critical first-transaction window.</p>
+  <div class="header-divider"></div>
+</div>
 
 <div class="grid">
 
   <!-- Card 1: Retention Curve -->
   <div class="card">
     <div class="card-title">User Retention Curve</div>
-    <div class="card-sub">Day 1 → Day 30 · Typical Payments App</div>
+    <div class="card-sub">Day 1 → Day 30 · Typical Mobile App</div>
     <div style="position:relative;">
       <div style="display:flex;">
         <div class="y-labels">
@@ -322,7 +379,7 @@
   <!-- Card 2: Payment Funnel -->
   <div class="card">
     <div class="card-title">Payment Flow Drop-off Funnel</div>
-    <div class="card-sub">Where users abandon · Payment Flow</div>
+    <div class="card-sub">Where users abandon · Checkout Flow</div>
 
     <div class="funnel-row">
       <div class="funnel-label">App Open</div>
